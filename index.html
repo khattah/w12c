@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W12C - Posts Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Posts Manager</h1>
+        <p>W12C | JavaScript Fetch API Assignment</p>
+    </header>
+
+    <main class="container">
+
+        <section class="actions">
+
+            <div class="card">
+                <h2>Create Post</h2>
+                <p class="description">Create a new post using POST.</p>
+
+                <form id="postForm">
+                    <label for="title">Post Title</label>
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Enter post title"
+                        required
+                    >
+
+                    <label for="body">Post Content</label>
+                    <textarea
+                        id="body"
+                        placeholder="Write your post here..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="btn primary">
+                        Send Post
+                    </button>
+                </form>
+
+                <p id="postMessage" class="message" role="status"></p>
+            </div>
+
+            <div class="card">
+                <h2>Update Post</h2>
+                <p class="description">
+                    Update post #1 using PATCH.
+                </p>
+
+                <button id="updateButton" class="btn warning">
+                    Update Post #1
+                </button>
+
+                <p id="updateMessage" class="message" role="status"></p>
+            </div>
+
+            <div class="card">
+                <h2>Delete Post</h2>
+                <p class="description">
+                    Delete post #1 using DELETE.
+                </p>
+
+                <button id="deleteButton" class="btn danger">
+                    Delete Post #1
+                </button>
+
+                <p id="deleteMessage" class="message" role="status"></p>
+            </div>
+
+        </section>
+
+        <section class="posts-section">
+            <div class="section-heading">
+                <div>
+                    <h2>All Posts</h2>
+                    <p>Posts loaded automatically using GET.</p>
+                </div>
+                <span class="badge">GET REQUEST</span>
+            </div>
+
+            <p id="getMessage" class="message" role="status">Loading posts...</p>
+
+            <div id="postsContainer" class="posts-grid"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>W12C — JavaScript Fetch API Assignment</p>
+    </footer>
+
+</body>
+</html>
